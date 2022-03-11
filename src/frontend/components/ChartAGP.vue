@@ -5,7 +5,7 @@
 	See https://lt1.org for further information.	*/
 
 
-import * as util from '../../common/util.js'
+import * as util from '../../common/util.ts'
 
 export default {
   data() {

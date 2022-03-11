@@ -13,8 +13,12 @@ export default {
     filename: 'lt1.bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  },
   module: {
     rules: [
+      { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/,},
       { test: /\.vue$/, use: 'vue-loader' },
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
       { test: /\.html$/, use: ['html-loader'] },

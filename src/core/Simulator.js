@@ -3,7 +3,7 @@
    Distributed under the MIT software license.
    See https://lt1.org for further information.	*/
 
-import InvalidResultError from '../common/InvalidResultError.js'
+import InvalidResultError from '../common/InvalidResultError.ts'
 import RK4 from './SolverRK4.js'
 
 class Simulator {

@@ -2,7 +2,7 @@
    simulate closed-loop glycemic control in type 1 diabetes.
    Distributed under the MIT software license.
    See https://lt1.org for further information.	*/
-import NotImplementedError from '../common/NotImplementedError.js'
+import NotImplementedError from '../common/NotImplementedError.ts'
 
 
 // base class of controller algorithm
