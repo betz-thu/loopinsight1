@@ -4,7 +4,7 @@
    	Distributed under the MIT software license.
 	See https://lt1.org for further information.	*/
 
-import ControllerPID from '../../core/ControllerPID.js';
+import ControllerPID from '../../core/ControllerPID.ts';
 
 export default {
 	props: {

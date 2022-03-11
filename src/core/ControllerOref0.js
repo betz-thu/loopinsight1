@@ -4,7 +4,7 @@
    See https://lt1.org for further information.	*/
 
 
-import AbstractController from './AbstractController.js'
+import AbstractController from './AbstractController.ts'
 
 import determine_basal from 'oref0/lib/determine-basal/determine-basal.js';
 import tempBasalFunctions from 'oref0/lib/basal-set-temp.js';

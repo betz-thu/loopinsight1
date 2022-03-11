@@ -5,7 +5,7 @@
 	See https://lt1.org for further information.	*/
 
 
-import * as util from '../../common/util.ts'
+import * as util from '../../common/math_util.ts'
 
 export default {
   data() {

@@ -4,7 +4,7 @@
    	Distributed under the MIT software license.
 	See https://lt1.org for further information.	*/
 
-import ControllerBasalBolus from '../../core/ControllerBasalBolus.js';
+import ControllerBasalBolus from '../../core/ControllerBasalBolus.ts';
 
 export default {
 	props: {

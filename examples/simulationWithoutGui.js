@@ -7,7 +7,7 @@
 // browser-based graphical user interface.
 
 import Simulator from '../src/Simulator.js'
-import ControllerBasalBolus from '../src/ControllerBasalBolus.js'
+import ControllerBasalBolus from '../src/ControllerBasalBolus.ts'
 import VirtualPatientUvaPadova from '../src/VirtualPatientUvaPadova.js'
 
 // define a patient object

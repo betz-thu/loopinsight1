@@ -4,16 +4,36 @@
    See https://lt1.org for further information.	*/
 
 
-import AbstractController from './AbstractController.js';
+import AbstractController from './AbstractController';
 
 class ControllerPID extends AbstractController {
+	
+	IIReq: number;
+	kP: number;
+	kI: number;
+	kD: number;
+	target: number;
+	useBolus: number;
+	PreBolusTime: number;
+	CarbFactor: number;
+	e_int: number;
+	e_old: number;
+	IIR: number;
+	bolus: number;
 
 	constructor() {
 		super()
 		this.reset()
 	}
 
-	setParams(basalRate, kP, kI, kD, target, useBolus, PreBolusTime, CarbFactor) {
+	setParams(basalRate: number, 
+		kP: number, 
+		kI: number, 
+		kD: number, 
+		target: number, 
+		useBolus: number, 
+		PreBolusTime: number, 
+		CarbFactor: number) {
 
 		this.IIReq = basalRate;
 		this.kP = kP;
@@ -36,11 +56,11 @@ class ControllerPID extends AbstractController {
 	 * computes insulin demand
 	 * 
 	 * @param {number} t - TODO
-	 * @param {number} y - TODO
+	 * @param {object} y - TODO
 	 * @param {number} _x - TODO
-	 * @returns {{iir: number, ibolus: number, logData: Object}} - TODO
+	 * @returns {{iir: number, ibolus: number, logData: object}} - TODO
 	 */
-	 computeTreatment(t, y, _x) {
+	 computeTreatment(t: number, y: {[key: string]: any}, _x: number): { iir: number; ibolus: number; logData?: object; } {
 
 		// compute bolus (IIR remains constant all the time)
 		this.bolus = this.useBolus * this.announcedCarbs(t + this.PreBolusTime) / 10.0
